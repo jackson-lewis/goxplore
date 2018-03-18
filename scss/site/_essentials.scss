@@ -1,0 +1,69 @@
+//  ////  ////  --  --|    ESSENTIALS
+
+
+.essentials-intro {
+	width: 100%;
+	margin-top: 124px;
+	margin-bottom: 64px;
+	display: block;
+	position: relative;
+
+	p {
+		margin: 24px 0;
+
+		text-align: center;
+	}
+
+	div {
+		width: 12rem;
+		height: 12rem;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+
+		border-radius: 100%;
+		background-color: $orange;
+
+		p, h3 {
+			margin: 0;
+			padding: 0;
+			color: $white;
+		}
+
+		p {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+
+			&::after {
+				@extend %pseudo;
+				width: 4rem;
+				margin: 0 auto;
+				border-bottom: 2px solid $white;
+			}
+		}
+	}
+}
+
+.essential {
+	width: 100%;
+	display: block;
+	position: relative;
+
+	h3 {
+		text-transform: capitalize;
+	}
+
+	img {
+		margin: 64px auto 48px auto;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	div:first-of-type {
+		margin-bottom: 24px;
+	}
+}

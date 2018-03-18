@@ -1,0 +1,81 @@
+//  ////  ////  --  --|    VARIABLES
+
+
+
+
+//  ////  --|    GRID
+
+
+//  SET THE WIDTH OF THE CONTAINER INCLUDING UNIT
+$container-width:     100%;
+$container-max-width: 100%;
+
+//  SET NUMBER OF COLUMNS FOR THE GRID
+$column-count: 6;
+
+//  WIDTH OF COLUMN IS CALCULATED
+$column-width: $container-width / $column-count;
+
+//  SET VARIATIONS OF COLUMNS REQUIRED
+$sizes: 'c';
+
+
+
+
+//  ////  --|    COLORS
+
+
+//  COLOR SCHEME
+$black:     #080808;
+$white:     #FAFAFA;
+$orange:    #D16F3D;
+$blue:      #168BE3;
+
+$red:		#D12B2B;
+
+
+//  TRANSPARENT BACKGROUND COLOR
+$trans-black: rgba($black, 0.8);
+
+
+//  ////  --|    MAX WIDTHS
+
+$s-max:		unquote('414px');
+$m-max:		unquote('600px');
+$l-max:		unquote('1224px');
+
+
+
+
+//  ////  --|    Z-INDEX ARCHIVE
+
+
+//  TOP LEVEL
+$z-header:      80;
+$z-container:   60;
+$z-footer:      40;
+
+
+//  HEADER SUB LEVEL (CONTENT)
+$z-logo:        20;
+$z-search-icon: 20;
+$z-hamburger:   20;
+$z-nav:         10;
+
+
+//  HERO (CONTENT)
+$z-parallax:    -1;
+$z-heading:     10;
+
+
+//  FOOTER SUB LEVEL (CONTENT)
+$z-container:      10;
+
+
+
+
+//  ////  --|    MISC
+
+
+//  HOVER EFFECT TIMER
+$duration: .3s;

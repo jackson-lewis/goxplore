@@ -1,0 +1,116 @@
+//  ////  ////  --  --|    TYPOGRAPHY
+
+
+
+
+html {
+    font-size: 62.5%;
+}
+
+p, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; border: 0 }
+
+
+//  MAIN FONT CLASS
+body {
+	color: $black;
+	font-family: "Skolar Sans Latin", "Helvetica", sans-serif;
+	font-size: 1.6rem;
+	font-style: normal;
+}
+
+p {
+    max-width: $s-max;
+    margin: 0 auto;
+    padding: 0 4%;
+    
+    text-align: justify;
+	font-weight: 200;
+    line-height: 1.5;
+
+    @include x( m ) {
+        max-width: $m-max;
+    }
+}
+
+p + p {
+    margin-top: 2.4rem;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: "Vista Sans OTCE", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+
+    @include x( m ) {
+        font-size: 6rem;
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: 1.125;
+
+    &::after {
+        @extend %pseudo;
+        width: 6rem;
+        margin: 0.6rem auto 0 auto;
+        border-bottom: 0.2rem solid $orange;
+    }
+}
+
+h3 {
+    color: $orange;
+    font-family: "Skippy Sharp", sans-serif;
+
+    font-size: 2.8rem;
+    line-height: 1.2857142857;
+    letter-spacing: 0.1rem;
+    
+    transform: rotateZ(-4deg);
+}
+
+h4 {
+    font-size: 2.6rem;
+    line-height: 1.3846153846;
+    text-transform: capitalize;
+    
+    margin-bottom: 6px;
+}
+
+h5 {
+    font-size: 2.2rem;
+    line-height: 1.0909090909;
+    text-transform: capitalize;
+}
+
+.dual-heading {
+    width: 100%;
+    margin-bottom: 3.6rem;
+
+    @include x( m ) {
+        h2 {
+            font-size: 4.6rem;
+        }
+        h3 {
+            font-size: 3.2rem;
+        }
+    }
+
+    @include x( l ) {
+        h1 {
+            font-size: 7.2rem;
+        }
+        h3 {
+            font-size: 4rem;
+        }
+    }
+}

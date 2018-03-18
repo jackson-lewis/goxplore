@@ -1,0 +1,130 @@
+//  ////  ////  --  --|    COMMENTS
+
+
+
+
+.comments {
+    width: 100%;
+    max-width: $s-max;
+    margin: 0 auto;
+
+    @include x( m ) {
+        max-width: $m-max;
+    }
+
+    @include x( l ) {
+        width: 67%;
+        max-width: none;
+        margin-left: 0;
+        padding-right: 40px;
+        float: left;
+
+        h2 {
+            text-align: left;
+
+            &::after {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.comments-wrap {
+    margin: 4.8rem 0;
+    padding-left: 0;
+
+    text-align: center;
+}
+
+.comment-item {
+    width: 100%;
+    margin-bottom: 3.6rem;
+    padding: 0 4%;
+
+    h5 {
+        margin-bottom: 0.6rem;
+        text-align: left;
+    }
+
+    p {
+        padding: 0;
+        text-align: left;
+    }
+
+    span {
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+
+    &::after {
+        @extend %pseudo;
+
+        width: 25%;
+        margin-top: 1.2rem;
+
+        border-bottom: 0.1rem solid $orange
+    }
+
+    @include x( l ) {
+        padding: 0;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.add-comment {
+    width: 100%;
+    position: relative;
+
+    textarea {
+        width: 92%;
+        margin: 0 4%;
+        padding: 0.6rem 4%;
+        padding-bottom: 2.4rem;
+        display: block;
+        position: relative;
+        resize: vertical;
+
+        font-size: 2.4rem;
+        background-color: $white;
+        border: none;
+    }
+
+    .button-blue {
+        margin: 0;
+        position: absolute;
+        bottom: -2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @extend %box-shadow;
+    }
+
+    @include x( l ) {
+        
+
+        textarea {
+            width: 100%;
+            margin: 0;
+            padding: 0.6rem 1.2rem;
+            padding-bottom: 3.6rem;
+
+            background-color: rbga( $white, .8 );
+            font-size: 2rem;
+        }
+    }
+}
+
+.login-prompt {
+    margin-top: 1.2rem;
+    margin-left: 4%;
+    display: inline-block;
+    position: relative;
+
+    @include x( l ) {
+        margin-left: 0;
+        font-size: 2rem;
+    }
+}

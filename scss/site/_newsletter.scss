@@ -1,0 +1,108 @@
+//  ////  ////  --  --|    NEWSLETTER
+
+
+.newsletter {
+	max-width: $s-max;
+	margin: 8.4rem auto;
+
+	.dual-heading {
+		margin-bottom: 2.4rem;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	@include x( m ) {
+
+		width: 92%;
+		max-width: 740px;
+
+		content: "";
+	    display: table;
+	    clear: both;
+
+	    .dual-heading {
+	    	h2, h3 {
+	    		text-align: left;
+	    	}
+
+	    	h2 {
+	    		margin-top: 0.4rem;
+	    	}
+			
+			h2::after {
+				margin-left: 0;
+			}
+		}
+
+		p {
+			padding-left: 0;
+			text-align: left;
+		}
+
+		.nl-content, form {
+			width: 50%;
+			margin: 0;
+			float: left;
+		}
+	}
+
+	@include x( l ) {
+		max-width: 960px;
+	}
+}
+
+.form-newsletter {
+	margin-top: 2.4rem;
+	text-align: center;
+
+	@include x( m ) {
+		margin-top: 6rem !important;
+		padding-left: 4%; 
+		text-align: right;
+
+		input:not(input[type="submit"]) {
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	@include x( l ) {
+		padding-left: 16%; 
+
+	}
+}
+
+input[type="name"], input[type="email"] {
+	border-bottom-color: $black;
+}
+
+.shaker {
+	border-bottom-color: $red !important;
+
+	animation: shaker .8s forwards;
+
+}
+
+@keyframes shaker {
+    0% {
+        transform: translatex(0px);
+    }
+
+    33% {
+        transform: translatex(6px);
+    }
+
+    50% {
+        transform: translatex(-6px);
+    }
+
+    67% {
+        transform: translatex(6px);
+    }
+
+    100% {
+        transform: translatex(0px);
+    }
+}

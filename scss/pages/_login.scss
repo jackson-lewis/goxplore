@@ -1,0 +1,64 @@
+//  ////  ////  --  --|    LOGIN
+
+
+.login {
+
+	min-height: 100vh;
+
+	.parallax {
+		filter: blur(2px);
+	}
+
+	.dual-heading {
+		top: 16%;
+
+		p {
+			margin-top: 24px;
+			text-align: center;
+			color: $white;
+
+			&::before {
+				@extend %pseudo;
+				width: 6rem;
+				margin: 0 auto;
+				margin-bottom: 6px;
+				border-bottom: 2px solid $white;
+			}
+		}
+	}
+
+	input[type="name"], input[type="password"] {
+		border-bottom-color: $white;
+		color: $white;
+
+		&::placeholder {
+			color: $white;
+		}
+	}
+
+}
+
+.form-login {
+	width: 100%;
+	max-width: $s-max;
+	display: none;
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	text-align: center;
+
+	input[type="submit"] {
+		margin-bottom: 18px;
+	}
+}
+
+
+
+.reg-link {
+	margin-top: 24px;
+	color: $white;
+	text-transform: capitalize;
+	cursor: pointer;
+}

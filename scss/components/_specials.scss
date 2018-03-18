@@ -1,0 +1,13 @@
+//  ////  ////  --  --|    SPECIALS
+
+
+.splatter {
+    width: 100%;
+    padding: 0;
+    display: block;
+    
+    img {
+        display: block;
+        transform: rotateZ(180deg);
+    }
+}

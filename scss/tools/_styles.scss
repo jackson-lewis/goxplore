@@ -1,0 +1,103 @@
+//  ////  ////  --  --|    STYLES
+
+
+
+
+//  IMAGE HOVER EFFECT
+%img-pos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    background-color: none;
+}
+.image-1 { @extend %img-pos; z-index: 4 }
+.image-2 { @extend %img-pos; z-index: 3 }
+
+
+%pseudo {
+	content: '';
+	display: block;
+	position: relative;
+}
+
+%enlarge {
+    font-size: 2rem;
+}
+
+%shadow {
+	text-shadow: 0 0 1.4rem rgba($black, .8);
+}
+
+%box-shadow {
+	box-shadow: 0 0 1.4rem rgba($black, .4);
+}
+
+%clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*=button] {
+    margin: 1.2rem auto 0 auto;
+    padding: 1.4rem 2.4rem;
+    display: inline-block;
+    position: relative;
+    
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    
+    border-radius: 2.4rem;
+
+    transition: $duration;
+}
+
+.button-blue {
+    color: $white;
+    background-color: $blue;
+    border: 0.2rem solid $blue;
+
+    &:hover {
+        color: $blue;
+        background-color: $white;
+    }
+}
+
+.button-white {
+    color: $blue;
+    background-color: $white;
+    border: 0.2rem solid $white;
+
+    &:hover {
+        color: $white;
+        background-color: $blue;
+        border: 0.2rem solid $blue;
+    }
+
+    @extend %box-shadow;
+}
+
+.button-blue-border {
+    padding: 1.2rem 2.2rem;
+
+    color: $blue;
+    background-color: transparent;
+    border: 0.2rem solid $blue;
+}
+
+.log-out {
+    margin-bottom: 2.4rem;
+    cursor: pointer;
+
+    background-color: $red;
+    border-color: $red;
+
+    &:hover {
+        color: $red;
+        background-color: $white;
+        
+    }
+}

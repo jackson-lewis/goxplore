@@ -1,0 +1,32 @@
+//  ////  ////  --  --|    CLOSE HEADER
+
+
+.close {
+	width: 26px;
+	height: 21px;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: $z-hamburger;
+    
+    transition: .8s;
+}
+
+.cross1, .cross2 {
+    width: 26px;
+    height: 3px;
+    background-color: $white;
+    transition: .8s;
+}
+
+.cross1 {
+    transform: translate(0px, 9px) rotate(45deg);
+}
+.cross2 {
+    transform: translate(0px, 6px) rotate(-45deg);
+}
+
+.barswitch {
+	background-color: $black;
+}

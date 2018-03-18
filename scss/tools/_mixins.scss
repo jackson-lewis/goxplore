@@ -1,0 +1,68 @@
+//  ////  ////  --  --|    MIXINS
+
+
+//  MEDIA QUERY
+@mixin x( $switcher ) {
+    @if $switcher == m { // TABLET
+        @media (min-width: 767px) { @content; }
+    }
+    @else if $switcher == l { // DESKTOP
+        @media (min-width: 1023px) { @content; }
+    }
+    @else if $switcher == xl { // DESKTOP+
+        @media (min-width: 1440px)  { @content; }
+    }
+}
+
+//  MEDIA QUERY ORIENTATION
+@mixin y() {
+    @media screen only and (max-width: 767px) and (orientation: landscape) { @content; }
+}
+
+
+//  SIZER
+@mixin size( $width, $height: unquote('auto') ) {
+    width: $width;
+    height: $height;
+}
+
+
+//  PLACEHOLDER
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+//  TRUNCATE
+@mixin truncate( $overflow: ellipsis ) {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+//  PSEUDO
+@mixin pseudo( $display: block, $pos: relative, $content: '' ) {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+
+// RESPONSIVE RATIO
+@mixin ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo;
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}

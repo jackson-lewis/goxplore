@@ -1,0 +1,153 @@
+//  ////  ////  --  --|    ITEM
+
+
+.thumbnail {
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        max-width: 130%;
+        min-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate( -50%, -50% );
+    }
+
+}
+
+body:not([data-page="search"]) [class*=item-] {
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+[class*="item-"] {
+    width: 100%;
+    max-width: $s-max;
+    margin: 0 auto 4.8rem auto;
+    padding-bottom: 3.6rem;
+    display: block;
+    position: relative;
+    text-align: center;
+
+
+    .thumbnail {
+        @include ratio(16,9);
+    }
+
+    .button-blue {
+        margin: 0;
+        position: absolute;
+        bottom: 1.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @extend %box-shadow;
+
+        &:hover {
+          border-color: $white;
+        }
+    }
+    
+    p[data-item-text="desc"] {
+        margin-bottom: 0.6rem;
+        position: relative;
+        height: 7.2rem; // 3 LINES
+        overflow: hidden;
+        
+        &::after {
+              @extend %pseudo;
+              text-align: right;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              width: 50%;
+              height: 2.4rem;
+              background: linear-gradient(to right, rgba($white, 0), rgba($white, 1) 75%);
+        }
+    }
+
+    @include x( m ) {
+        width: 46%;
+        margin-left: 2%;
+        margin-right: 2%;
+        max-width: none;
+        float: left;
+
+        p[data-item-text="desc"] {
+          padding: 0;
+        }
+    }
+
+    @include x( l ) {
+        width: 29.3333333%;
+        margin-left: 2%;
+        margin-right: 2%;
+        max-width: none;
+        float: left;
+    }
+}
+
+
+.item-reg {
+    .thumbnail {
+        @include ratio(16,9);
+    }
+} 
+
+.item-sea {
+    .thumbnail {
+        @include ratio(7,3);
+    }
+} 
+
+.item-vid {
+    .thumbnail {
+        @include ratio(16,9);
+    }
+
+    h4 {
+      margin: 0;
+    }
+    
+    p[data-item-text="time"] {
+          padding: 0.4rem 1rem;
+          position: absolute;
+          bottom: 4.8rem;
+          right: 4%;
+
+          background-color: rgba($white, .9);
+          border-radius: 2.4rem;
+          text-align: center;
+          line-height: 1;
+
+          @extend %box-shadow;
+
+      }
+
+      h3 {
+        width: 4.4rem;
+        height: 4.4rem;
+        margin-bottom: 3.6rem;
+        display: inline-block;
+        position: relative;
+        top: 0;
+
+        transition: $duration;
+
+        color: $white;
+        background-color: $orange;
+        border-radius: 100%;
+        line-height: 1.5;
+    }
+
+    &:hover {
+      h3 {
+        top: -1.2rem;
+      }
+    }
+    
+}

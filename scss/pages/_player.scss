@@ -1,0 +1,140 @@
+//  ////  ////  --  --|    LOGIN
+
+
+body[data-hero="player"] {
+
+	background-color: $black;
+
+	.header-bg::after {
+		background-color: rgba($black, .8);
+	}
+
+	nav ul a {
+		color: $black;
+	}
+
+	h1, h2, h4, h5 {
+		color: $white;
+	}
+
+	p, a, small {
+		color: $white;
+	}
+
+	article, footer, .video-container {
+		background-color: transparent;
+	}
+
+	input[type="name"], input[type="email"], .social-media::before, .social-media::after {
+		border-bottom-color: $white; 
+	}
+
+	input::placeholder {
+		color: $white; 
+	}
+
+	.item-vid p {
+		background-color: $black;
+	}
+
+	.button-blue:hover {
+		background-color: $white;
+		border-color: $white;
+	}
+
+}
+
+.video-details {
+	@include x( m ) {
+		width: 67%;
+		max-width: none;
+
+		float: left;
+
+		p {
+			text-align: left !important;
+			padding-left: 0 !important;
+			margin-left: 0;
+
+			&::before {
+				margin-left: 0 !important;
+			}
+		}
+	}
+}
+
+.link-dest {
+	width: 100%;
+	margin-bottom: 7.2rem;
+	text-align: center;
+
+	p {
+		text-align: center;
+
+		&::before {
+			@extend %pseudo;
+			width: 6rem;
+			margin: 6px auto;
+
+			border-bottom: 2px solid $orange;
+		}
+	}
+
+	@include x( m ) {
+		width: 33%;
+		padding-right: 4%;
+		float: left;
+
+		text-align: right;
+
+		p {
+			text-align: inherit;
+
+			&::before {
+				margin-right: 0;
+			}
+		}
+		
+	}
+
+	@include x( l ) {
+		padding-right: 0;
+
+		p {
+			padding-right: 0;
+		}
+	}
+}
+
+.playlist {
+	margin-top: 8.4rem;
+	padding: 0;
+
+	@include x( l ) {
+		width: 33%;
+		margin-top: 0;
+
+		float: left;
+
+		h3 {
+			margin-bottom: 4.8rem;
+		}
+
+		.item-vid {
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.player-lower-col {
+	width: 100%;
+	margin: 0 auto;
+
+	@extend %clearfix;
+
+	@include x( l ) {
+		max-width: 960px;
+	}
+}

@@ -1,0 +1,68 @@
+//  ////  ////  --  --|    REGISTER
+
+.reg-wrap {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.register {
+    width: 92%;
+    max-width: $s-max;
+    margin: 8rem auto 0 auto;
+    padding: 1.2rem 0 0 0;
+    position: relative;
+
+    border-radius: 2.4rem;
+    background-color: $white;
+
+    @extend %box-shadow;
+
+    h3 {
+        margin-bottom: 4.8rem;
+    }
+
+    form {
+        width: 100%;
+        padding-bottom: 4.8rem;
+
+        input {
+            border-bottom-color: $black;
+        }
+
+        input[type="name"], input[type="text"], input[type="email"], input[type="password"] {
+            margin-bottom: 2.2rem;
+        }
+
+        .select {
+            margin: 0 4% 0 4%;
+            position: relative;
+
+            label {
+                margin-left: 4%;
+            }
+        }
+
+        label {
+            color: $black;
+        }
+
+        .button-blue {
+            position: absolute;
+            bottom: -2.4rem;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @extend %box-shadow;
+        }
+    }
+
+    @include x( m ) {
+        margin-top: 16rem;
+    }
+}

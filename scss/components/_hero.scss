@@ -1,0 +1,133 @@
+//  ////  ////  --  --|    HERO
+
+.hero {
+    width: 100%;
+    height: calc( 100vh + 10rem );
+    min-height: 500px;
+    max-height: 900px;
+    position: relative;
+    overflow-y: hidden;
+    
+    .dual-heading {
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        z-index: $z-heading;
+
+        h1 { 
+            display: none; 
+
+            animation: shrink 3s;
+        }
+
+        h3 span { display: none; }
+        
+        h1, h3 {
+            color: $white;
+            @extend %shadow;
+        }
+    }
+
+    @include x( m ) {
+        max-height: 1200px;
+    }
+
+    @include x( l ) {
+        max-height: 1600px;
+    }
+}
+
+@keyframes shrink {
+
+    from { transform: scale(1.4); opacity: 0; }
+
+    to { transform: scale(1); opacity: 1; }
+
+}
+
+.parallax {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    
+    z-index: $z-parallax;
+    
+    img {
+        max-width: none;
+        height: 100%;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.caption {
+    padding-right: 2%;
+    display: none;
+    position: fixed;
+    right: 0;
+    bottom: 6px;
+    z-index: 1;
+    
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgba($white,.8);
+    @extend %shadow;
+}
+
+.prompt {
+    width: 30px;
+    height: 20px;
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    left: calc( 50% - 15px );
+
+    animation: prompt 4s infinite;
+
+    span {
+        width: 30px;
+        height: 3px;
+        display: block;
+        position: relative;
+
+        background-color: $white;
+        transform-origin: 100% 50%;
+        transform: translateX(-50%) rotateZ(45deg);
+
+        &::after {
+            @extend %pseudo;
+
+            width: 30px;
+            height: 3px;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            background-color: $white;
+            transform-origin: 100% 100%;
+            transform: rotateZ(90deg);
+        }
+    }
+}
+
+@keyframes prompt {
+
+    0% { transform: scale(1) translateY(0px);  }
+
+    25% { transform: scale(0.8) translateY(16px); }
+
+    50% { transform: scale(1) translateY(8px);  }
+
+    75% { transform: scale(0.8) translateY(12px); }
+
+    100% { transform: scale(1) translateY(0px);  }
+
+}

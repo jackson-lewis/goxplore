@@ -1,0 +1,78 @@
+//  ////  ////  --  --|    CORE
+
+
+//  RESETTERS
+* { box-sizing: border-box }
+
+img { max-width: 100%; display: block }
+
+//  PLACEHOLDER
+* {
+    @include placeholder {
+        color: $blue;
+    }
+
+    &::selection {
+        color: $white;
+        background-color: $orange;
+        text-shadow: none;
+    }
+}
+
+
+//  BODY
+body {
+	width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: block;
+	position: relative;
+    overflow-x: hidden; 
+    
+	background-color: $white;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+}
+
+section, article {
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+
+    background-color: $white;
+
+    z-index: $z-container;
+
+    &::before {
+        @extend %pseudo;
+
+        width: 100%;
+        max-width: 100%;
+        height: 10rem;
+        position: absolute;
+        top: -10rem;
+        left: 0;
+
+        transform: rotateZ(180deg);
+
+        background-image: url(../assets/specials/splatter@mobile.png);
+        background-size: contain;
+    }
+}
+
+.segment {
+    @extend %clearfix;
+
+    @include x( l ) {
+        max-width: $l-max;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

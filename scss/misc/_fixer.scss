@@ -1,0 +1,37 @@
+//  ////  ////  --  --|    FIXER
+
+
+
+
+.page-intro {
+	padding-top: 2.4rem;
+	margin-bottom: 4.8rem;
+
+	p {
+		@extend %enlarge;
+	}
+
+	@include x( m ) {
+		padding-top: 3.6rem;
+		
+
+		p {
+			text-align: center;
+		}
+	}
+
+}
+
+.showcase {
+	margin: 8.4rem 0;
+}
+
+.video-categories {
+	margin-bottom: 9.6rem;
+
+	@include x( l ) {
+		max-width: 1224px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

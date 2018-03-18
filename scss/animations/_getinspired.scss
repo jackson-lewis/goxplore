@@ -1,0 +1,29 @@
+//  ////  ////  --  --|    GET INSPIRED ANIMATION
+
+
+
+.ani-inspired {
+    img {
+        left: 50%;
+        transform: translateX( -50% );
+        animation: inspired 20s forwards;
+
+        @include x( m ) {
+            min-width: 100%;
+            animation: inspired 60s forwards;
+        } 
+
+        @include x( l ) {
+            min-width: 100%;
+            animation: inspired 60s forwards;
+        } 
+    }
+}
+
+@keyframes inspired {
+
+    0% { transform: translateX( -50% ) scale(1) }
+
+    100% { transform: translateX( -50% ) scale(2.5) }
+
+}

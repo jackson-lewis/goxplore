@@ -1,0 +1,80 @@
+//  ////  ////  --  --|    SEARCH
+
+
+
+
+body[data-page="search"] .search-bar {
+	width: 100%;
+	margin-bottom: 6rem;
+	display: block;
+	position: relative;
+
+	.search {
+		top: 0;
+
+		input[type="text"] {
+			border-bottom-color: $black;
+			color: $black;
+
+			&::placeholder {
+				color: $black;
+			}
+		}
+
+		&::after {
+			border-bottom-color: $black;
+		}
+
+		input[type="submit"] {
+	        background: url(../assets/icons/search-icon-colour.png) no-repeat;
+	        background-size: 26px 26px;
+	    }
+	}
+
+	p {
+		margin-top: 0.6rem;
+		color: $orange;
+		font-weight: 700;
+	}
+
+	@include x( m ) {
+		p {
+			max-width: 340px;
+			padding: 0 1.8rem;
+		}
+	}
+
+}
+
+.results .definer {
+	margin-bottom: 4.8rem;
+
+	p {
+		text-align: center;
+
+		color: $orange;
+	}
+
+}
+
+
+
+@include x( l ) {
+
+	.filter-segment {
+		width: 33%;
+		float: left;
+	}
+
+	.results {
+		width: 100%;
+		float: left;
+
+		[class*="item-"] {
+			width: 29%;
+        	margin-left: 2%;
+        	margin-right: 2%;
+		}
+	}
+
+}

@@ -1,0 +1,28 @@
+//  ////  ////  --  --|    MULTI ANIMATIONS
+
+
+
+.ani-thorsmork,
+.ani-great-barrier-reef,
+.ani-huskys,
+.ani-shacks
+{
+    img {
+        left: -40%;
+        transform: translateX( 0 ) scale(1);
+        animation: regular 60s forwards;
+
+        @include x( m ) {
+            left: 0%;
+            transform: translateX( 0 ) scale(1);
+            animation: m-regular 60s forwards;
+        } 
+
+        @include x( l ) {
+            min-width: 100%;
+            left: 0%;
+            transform: translateX( 0 ) scale(1);
+            animation: l-regular 60s forwards;
+        } 
+    }
+}

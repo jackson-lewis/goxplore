@@ -1,0 +1,63 @@
+//  ////  ////  --  --|    FIND ADVENTURE MODULE
+
+.find-adventure {
+	height: 80vh;
+	position: relative;
+
+	background-image: url(../assets/heros/find-adventure.jpg);
+	background-size: auto 70%;
+	background-repeat: no-repeat;
+	background-position: 80% bottom;
+    text-align: center;
+
+    &::after {
+        @extend %pseudo;
+
+        width: 100%;
+        max-width: 100%;
+        height: 10rem;
+        position: absolute;
+        bottom: 0rem;
+        left: 0;
+
+        transform: rotateZ(180deg);
+
+        background-image: url(../assets/specials/splatter@mobile.png);
+        background-size: contain;
+    }
+
+    .dual-heading {
+
+		p {
+			margin-top: 2.4rem;
+			text-align: center;
+
+			@extend %enlarge;
+		}
+	}
+
+    .button-white {
+    	position: absolute;
+    	bottom: 124px;
+    	transform: translateX(-50%);
+    }
+
+	@include x( m ) {
+		height: 60vh;
+        min-height: 50rem;
+
+        background-size: 100% auto;
+        background-position: center 30vh;
+
+        p {
+            padding: 0;
+        }
+	}
+
+    @include x( l ) {
+        height: 60rem;
+
+        background-size: 100% auto;
+        background-position: center 30vh;
+    }
+}

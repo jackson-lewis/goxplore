@@ -1,0 +1,59 @@
+//  ////  ////  --  --|    YELLOWSTONE ANIMATION
+
+
+
+.ani-yellowstone {
+    img {
+        left: 0;
+        filter: blur(4px);
+        transform: translate(18%, 24%) scale(2);
+        animation: yellowstone 40s forwards;
+
+        @include x( m ) {
+            filter: blur(0px);
+            animation: m-yellowstone 30s forwards;
+        }   
+    }
+}
+
+@keyframes m-yellowstone {
+
+    0% {
+        opacity: 0;
+        transform-origin: 10% 25%;
+        transform: translate(0%, 20%) scale(3);
+    }
+
+    5% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0%, -10%) scale(1.5);
+    }
+
+}
+
+
+@keyframes yellowstone {
+
+    0% {
+        filter: blur(4px);
+        transform: translate(18%, 24%) scale(2);
+    }
+
+    5% {
+        filter: blur(0px);
+        transform: translate(18%, 24%) scale(2);
+    }
+
+    100% {
+        filter: blur(0px);
+        transform: translate(-40%, 0%) scale(1);
+    }
+
+}
